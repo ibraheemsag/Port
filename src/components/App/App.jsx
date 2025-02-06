@@ -1,10 +1,10 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from '../../pages/Home';
-import Projects from '../../pages/Projects';
-import Contact from '../../pages/Contact';
+import Home from '../../pages/Home/Home';
+import Projects from '../../pages/Project/Projects';
+import Contact from '../../pages/Contact/Contact';
 import Layout from '../Layout/Layout';
-import NotFound from '../../pages/NotFound';
+import NotFound from '../../pages/NotFound/NotFound';
 // TODO: Add a 404 Page
 // TODO: Add languages
 // TODO: Add a light theme

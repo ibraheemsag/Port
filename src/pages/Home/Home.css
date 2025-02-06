@@ -1,0 +1,111 @@
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  color: var(--text-primary, #2c3e50);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.intro-section {
+  background-color: var(--card-bg, #f8f9fa);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.intro-section h2 {
+  color: var(--text-primary, #34495e);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.intro-section p {
+  color: var(--text-secondary, #555);
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.highlights {
+  background-color: var(--card-bg, #ffffff);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.highlights h3 {
+  color: var(--text-primary, #34495e);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.highlights ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.highlights li {
+  color: var(--text-secondary, #555);
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.highlights li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color, #3498db);
+}
+
+/* Dark theme styles */
+[data-theme='dark'] .home-container h1 {
+  color: var(--text-primary, #ffffff);
+}
+
+[data-theme='dark'] .intro-section,
+[data-theme='dark'] .highlights {
+  background-color: var(--card-bg, #2a2a2a);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='dark'] .intro-section h2,
+[data-theme='dark'] .highlights h3 {
+  color: var(--text-primary, #ffffff);
+}
+
+[data-theme='dark'] .intro-section p,
+[data-theme='dark'] .highlights li {
+  color: var(--text-secondary, #cccccc);
+}
+
+[data-theme='dark'] .highlights li::before {
+  color: var(--accent-color, #60a5fa);
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1rem;
+  }
+  
+  .home-container h1 {
+    font-size: 2rem;
+  }
+  
+  .intro-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .intro-section,
+  .highlights {
+    padding: 1.5rem;
+  }
+} 

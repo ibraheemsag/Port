@@ -1,29 +1,16 @@
-import { Outlet, Link } from "react-router-dom";
-import ToggleTheme from '../ToggleTheme/ToggleTheme'; // Add this import
+import { Outlet } from "react-router-dom";
+import Navbar from '../Navbar/Navbar';
+import './Layout.css';
 
 const Layout = () => {
   return (
-    <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/projects">Projects</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li>
-            <ToggleTheme />
-          </li>
-        </ul>
-      </nav>
-
-      <Outlet />
-    </>
-  )
+    <div className="layout">
+      <Navbar />
+      <main className="main-content">
+        <Outlet />
+      </main>
+    </div>
+  );
 };
 
 export default Layout;
