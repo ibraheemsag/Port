@@ -1,5 +1,7 @@
 import './Projects.css';
-
+/// Pick an LLM model
+/// Pick a diffusion model. Maybe multiple and do sentiment analysis on them
+/// See if you can run an LLM locally. Llama? Quen? or DeepSeek?
 const Projects = () => {
   return (
     <div className="projects-container">
