@@ -5,6 +5,11 @@
   },
   "routes": [
     {
+      "route": "/api/*",
+      "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+      "backendUri": "http://20.207.90.219/{rest}"
+    },
+    {
       "route": "/*",
       "serve": "/index.html",
       "statusCode": 200
