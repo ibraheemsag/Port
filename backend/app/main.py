@@ -10,7 +10,10 @@ app = FastAPI()
 # Update origins to include Azure Static Web App URL and allow any HTTP requests
 origins = [
     "http://localhost:3000",
+    "https://localhost:3000",
+    "http://resume-frontend.azurestaticapps.net",
     "https://resume-frontend.azurestaticapps.net",
+    "http://yellow-desert-0f9167403.6.azurestaticapps.net",
     "https://yellow-desert-0f9167403.6.azurestaticapps.net",
     # Add more origins if needed
 ]
