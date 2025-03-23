@@ -2,8 +2,8 @@
 const config = {
   // API settings
   api: {
-    // Use a reliable CORS proxy to guarantee the request works
-    baseUrl: process.env.REACT_APP_API_BASE_URL || 'https://cors-anywhere.herokuapp.com/http://20.207.90.219',
+    // Using new Azure App Service with built-in HTTPS
+    baseUrl: process.env.REACT_APP_API_BASE_URL || 'https://port-backend-service.azurewebsites.net',
   },
   
   // Image settings
