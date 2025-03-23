@@ -1,0 +1,85 @@
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 200px;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.navbar li {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  padding: 8px 16px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--accent-color);
+}
+
+/* Style for the active link if needed */
+.navbar a.active {
+  color: var(--accent-color);
+  border-left: 3px solid var(--accent-color);
+  padding-left: 13px;
+}
+
+/* Underline animation on hover */
+.navbar a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* Dark mode styles */
+[data-theme='dark'] .navbar {
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='dark'] .navbar a {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .navbar a::after {
+  background-color: #ffffff;
+}
+
+/* Light mode styles */
+[data-theme='light'] .navbar {
+  background-color: #ffffff;
+}
+
+[data-theme='light'] .navbar a {
+  color: #333333;
+}
+
+[data-theme='light'] .navbar a::after {
+  background-color: #333333;
+}

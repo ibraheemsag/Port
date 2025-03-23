@@ -1,0 +1,394 @@
+.images-container {
+    display: flex;
+    align-items: stretch;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.upload-section, .modified-image-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container-title {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.image-preview-wrapper, .modified-image-wrapper {
+    width: 100%;
+    height: 400px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+    background-color: var(--bg-secondary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-preview, .modified-image-container {
+    width: 100%;
+    height: 100%;
+    border: 1px dashed var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-preview img, .modified-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.modified-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+}
+
+.upload-button-container {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.upload-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.modify-button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.modify-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.modify-button:hover {
+    background-color: #45a049;
+}
+
+.modify-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border-left: 4px solid #c62828;
+}
+
+.upload-status {
+    text-align: center;
+    margin-top: 10px;
+    color: var(--text-secondary);
+}
+
+.modified-image-placeholder.loading {
+    background-color: var(--bg-secondary);
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #4CAF50;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px;
+}
+
+[data-theme='dark'] .spinner {
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-left-color: #4CAF50;
+}
+
+.button-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Technical details section styling */
+.technical-details-content {
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.technical-details-content h2 {
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.technical-details-content p {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+/* Add dark mode specific overrides if needed */
+.no-image-placeholder {
+    color: var(--text-secondary);
+}
+
+.image-editor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.image-editor h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+/* Tab Container Styles */
+.image-editor-tabs-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Tab Header Styles */
+.image-editor-tabs-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.image-editor-tab-button {
+  background-color: #2196F3; /* Primary blue */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  padding: 12px 24px; /* Add padding */
+  margin: 0 8px; /* Add margin between buttons */
+  border-radius: 25px; /* More rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.image-editor-tab-button.active {
+  background-color: #0d47a1; /* Darker blue for active tab */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.image-editor-tab-button:hover {
+  background-color: #1976D2; /* Slightly darker blue on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Tab Content Styles */
+.image-editor-tab-content {
+  padding: 25px;
+  background-color: var(--bg-secondary, #f5f5f5); /* Use theme variable for background */
+  color: var(--text-primary, #333); /* Use theme variable for text */
+  border-radius: 12px; /* Rounded corners for content area */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for content */
+  border: 1px solid var(--border-color, #e0e0e0); /* Add border with theme variable */
+}
+
+/* Demo content styling */
+.demo-content {
+  width: 100%;
+}
+
+/* Image editor specific styles */
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+
+.upload-section {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container-title {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.image-preview-wrapper {
+  border: 1px solid var(--border-color, #ddd);
+  background-color: var(--bg-primary, #f9f9f9);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  height: 300px;
+}
+
+.image-preview, .modified-image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-preview img, .modified-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.no-image-placeholder, .modified-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-secondary, #777);
+  background-color: var(--bg-primary, #f4f4f4);
+  border-radius: 8px;
+  text-align: center;
+  padding: 20px;
+}
+
+.loading-indicator, .modified-image-placeholder.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.spinner, .button-spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-top-color: var(--primary-color, #2196F3);
+  border-radius: 50%;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 10px;
+}
+
+.button-spinner {
+  width: 18px;
+  height: 18px;
+  margin: 0 8px 0 0;
+  border-width: 2px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Upload and modify buttons */
+.upload-button-container, .modify-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.upload-button, .modify-button {
+  background-color: var(--primary-color, #2196F3);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-button:hover, .modify-button:hover {
+  background-color: var(--primary-color-dark, #1976D2);
+  transform: translateY(-2px);
+}
+
+.upload-button.disabled, .modify-button:disabled {
+  background-color: var(--disabled-color, #9e9e9e);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error-message {
+  color: var(--error-color, #f44336);
+  text-align: center;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: var(--error-bg, #ffebee);
+}
+
+.selected-emotion {
+  text-align: center;
+  margin: 15px 0;
+  font-weight: 500;
+  color: var(--primary-color, #2196F3);
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .image-editor-tab-content {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .image-preview-wrapper {
+  border-color: var(--border-color-dark, #444);
+  background-color: var(--bg-secondary-dark, #333);
+}
+
+@media (max-width: 768px) {
+  .images-container {
+    flex-direction: column;
+  }
+  
+  .upload-section {
+    min-width: 100%;
+  }
+}

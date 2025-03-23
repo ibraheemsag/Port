@@ -1,0 +1,43 @@
+/* ProjectTabs.css */
+
+.tabs-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tab-button {
+    background-color: #2196F3; /* Primary blue */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    margin: 5px; /* Add margin between buttons */
+    border-radius: 25px; /* More rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .tab-button.active {
+    background-color: #0d47a1; /* Darker blue for active tab */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  .tab-button:hover {
+    background-color: #1976D2; /* Slightly darker blue on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+  }
+  
+  .tab-content {
+    padding: 20px;
+    background-color: var(--bg-secondary); /* Use theme variable for background */
+    color: var(--text-primary); /* Use theme variable for text */
+    border-radius: 10px; /* Rounded corners for content area */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for content */
+    border: 1px solid var(--border-color); /* Add border with theme variable */
+  }
+  
+  /* Adjust shadow for dark mode */
+  [data-theme='dark'] .tab-content {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
