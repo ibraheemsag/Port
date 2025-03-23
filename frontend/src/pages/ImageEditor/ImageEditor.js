@@ -107,7 +107,7 @@ const ImageEditor = () => {
               {modifiedImage ? (
                 <img 
                   src={modifiedImage} 
-                  alt={`Image modified to evoke ${selectedEmotion}`} 
+                  alt={`Modified to evoke ${selectedEmotion}`} 
                   className="modified-image"
                 />
               ) : isLoading ? (
