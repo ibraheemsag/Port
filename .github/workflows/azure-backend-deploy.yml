@@ -52,6 +52,5 @@ jobs:
         registry-password: ${{ secrets.REGISTRY_PASSWORD }}
         name: port-backend
         location: 'centralindia'
-        ports: 80:8000
-        environment-variables: PORT=8000
+        ports: 80
         secure-environment-variables: ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }} OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }} 

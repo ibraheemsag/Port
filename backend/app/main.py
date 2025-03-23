@@ -4,7 +4,7 @@ import uvicorn
 from .routers import pix, rec
 import os
 
-# Trigger new deployment with ports correctly mapped 80:8000
+# Use port 80 directly in container to fix 405 errors
 app = FastAPI()
 
 # Update origins to include Azure Static Web App URL
@@ -30,5 +30,5 @@ def read_root():
     return {"message": "Hello from Azure Container Instance - API is running properly.", "status": "online"}
 
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", 8000))
+    port = int(os.getenv("PORT", 80))
     uvicorn.run(app, host="0.0.0.0", port=port)
