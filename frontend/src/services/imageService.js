@@ -1,4 +1,6 @@
 // A simple service for image-related API calls
+import config from '../config';
+
 const imageService = {
   /**
    * Modify an image to evoke a specific emotion
@@ -13,7 +15,7 @@ const imageService = {
       formData.append('image', image);
       formData.append('emotion', emotion);
       
-      const response = await fetch('http://localhost:8000/pix', {
+      const response = await fetch(`${config.api.baseUrl}/pix`, {
         method: 'POST',
         body: formData,
       });
