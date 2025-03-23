@@ -1,0 +1,111 @@
+# Project specific excludes
+rec_system/
+**/technical_reports/
+**/*technical_report*
+**/*report*.pdf
+**/*report*.docx
+
+# Frontend excludes
+# dependencies
+**/node_modules/
+**/.pnp
+**/.pnp.js
+
+# testing
+**/coverage/
+
+# production
+**/build/
+**/dist/
+**/.next/
+**/out/
+
+# misc
+**/.DS_Store
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+
+# Backend excludes
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+**/.Python
+**/env/
+**/venv/
+**/.env/
+**/ENV/
+**/env.bak/
+**/venv.bak/
+**/.venv
+**/pythonenv*
+
+# Distribution / packaging
+**/.Python
+**/build/
+**/develop-eggs/
+**/downloads/
+**/eggs/
+**/.eggs/
+**/lib/
+**/lib64/
+**/parts/
+**/sdist/
+**/var/
+**/wheels/
+**/*.egg-info/
+**/.installed.cfg
+**/*.egg
+
+# Unit test / coverage reports
+**/htmlcov/
+**/.tox/
+**/.coverage
+**/.coverage.*
+**/.cache
+**/nosetests.xml
+**/coverage.xml
+**/*.cover
+**/.hypothesis/
+**/.pytest_cache/
+
+# Flask/FastAPI
+**/instance/
+**/.webassets-cache
+
+# Jupyter Notebook
+**/.ipynb_checkpoints
+
+# IDE specific files
+**/.idea/
+**/.vscode/
+**/*.swp
+**/*.swo
+**/.DS_Store
+
+# Database files
+**/*.db
+**/*.sqlite
+**/*.sqlite3
+
+# Logs
+**/logs/
+**/*.log
+
+# Media and uploaded files (unless version controlled)
+**/uploads/
+**/media/
+**/static/uploads/
+
+# Cache files
+**/.mypy_cache/
+**/.pytest_cache/
+**/.eslintcache
+**/.stylelintcache 
