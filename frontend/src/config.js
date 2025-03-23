@@ -2,7 +2,7 @@
 const config = {
   // API settings
   api: {
-    baseUrl: process.env.REACT_APP_API_BASE_URL || '',
+    baseUrl: process.env.REACT_APP_API_BASE_URL || 'http://port-backend-4.centralindia.azurecontainer.io',
   },
   
   // Image settings

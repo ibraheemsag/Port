@@ -18,6 +18,11 @@ const imageService = {
       const response = await fetch(`${config.api.baseUrl}/pix`, {
         method: 'POST',
         body: formData,
+        mode: 'cors',
+        headers: {
+          'Accept': 'application/json',
+        },
+        credentials: 'omit'
       });
       
       // Handle rate limiting (429 Too Many Requests)

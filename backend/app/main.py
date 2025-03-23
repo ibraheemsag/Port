@@ -7,23 +7,26 @@ import os
 # Use port 80 directly in container to fix 405 errors
 app = FastAPI()
 
-# Update origins to include Azure Static Web App URL
+# Update origins to include Azure Static Web App URL and allow any HTTP requests
 origins = [
     "http://localhost:3000",
-    "https://resume-frontend.azurestaticapps.net",  # Add your Azure Static Web App URL
-    "https://yellow-desert-0f9167403.6.azurestaticapps.net"  # Add the current deployment URL
+    "https://resume-frontend.azurestaticapps.net",
+    "https://yellow-desert-0f9167403.6.azurestaticapps.net",
+    # Add more origins if needed
 ]
 
-app.include_router(pix.router)
-app.include_router(rec.router)
-
+# Add CORS middleware with proper configuration
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["*"],  # Allows all methods including OPTIONS
     allow_headers=["*"],
+    max_age=86400,  # Cache preflight requests for 24 hours
 )
+
+app.include_router(pix.router)
+app.include_router(rec.router)
 
 @app.get("/")
 def read_root():

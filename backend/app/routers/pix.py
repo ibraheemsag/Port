@@ -48,6 +48,10 @@ class RateLimiter:
 # Create rate limiter instance
 rate_limiter = RateLimiter(Config.RATE_LIMIT_PER_MINUTE)
 
+# Add OPTIONS handler for CORS preflight requests
+@router.options("/pix")
+async def options_pix():
+    return {}
 
 @router.post("/pix")
 async def pix(request: Request, emotion: str = Form(...), image: UploadFile = File(...)):
