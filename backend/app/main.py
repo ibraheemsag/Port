@@ -4,12 +4,14 @@ import uvicorn
 from .routers import pix, rec
 import os
 
+# Trigger deployment workflow with this comment
 app = FastAPI()
 
 # Update origins to include Azure Static Web App URL
 origins = [
     "http://localhost:3000",
-    "https://resume-frontend.azurestaticapps.net"  # Add your Azure Static Web App URL
+    "https://resume-frontend.azurestaticapps.net",  # Add your Azure Static Web App URL
+    "https://yellow-desert-0f9167403.6.azurestaticapps.net"  # Add the current deployment URL
 ]
 
 app.include_router(pix.router)
