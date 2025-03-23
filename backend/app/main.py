@@ -4,7 +4,7 @@ import uvicorn
 from .routers import pix, rec
 import os
 
-# Trigger deployment workflow with this comment
+# Trigger deployment workflow again after registering Microsoft.ContainerInstance provider
 app = FastAPI()
 
 # Update origins to include Azure Static Web App URL
@@ -27,7 +27,7 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
-    return {"message": "Hello World"}
+    return {"message": "Hello from Azure Container Instance"}
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 8000))
