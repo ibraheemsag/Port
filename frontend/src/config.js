@@ -2,8 +2,8 @@
 const config = {
   // API settings
   api: {
-    // Using new Azure App Service with built-in HTTPS
-    baseUrl: process.env.REACT_APP_API_BASE_URL || 'https://port-backend-service.azurewebsites.net',
+    // Using custom domain with HTTPS
+    baseUrl: process.env.REACT_APP_API_BASE_URL || 'https://api.ibraheem2000.dev',
   },
   
   // Image settings
