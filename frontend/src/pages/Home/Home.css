@@ -491,10 +491,14 @@
 @media (max-width: 768px) {
   .home-container {
     padding: 1rem;
+    padding-top: 0;
+    overflow-x: hidden;
   }
   
   .home-container h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
   }
   
   .intro-section h2,
@@ -504,15 +508,16 @@
   .projects-section h2,
   .contact-section h2 {
     font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
   
-  .education-header h3,
-  .experience-header h3,
-  .project-header h3,
-  .coursework h3,
-  .skill-category h3,
-  .contact-item h3 {
-    font-size: 1.3rem;
+  .intro-section p,
+  .education-item p,
+  .experience-item li,
+  .project-item li,
+  .contact-item p {
+    font-size: 1rem;
+    line-height: 1.5;
   }
   
   .intro-section,
@@ -521,18 +526,21 @@
   .skills-section,
   .projects-section,
   .contact-section {
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    border-radius: 6px;
   }
   
   .skills-grid,
   .contact-grid {
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
   
   .skill-category,
   .contact-item {
-    padding: 1.25rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
   }
   
   .education-header,
@@ -549,10 +557,67 @@
   }
   
   .resume-button {
-    padding: 0.6rem 1.2rem;
+    width: 100%;
+    text-align: center;
   }
   
   .profile-image-container {
-    max-width: 220px;
+    max-width: 200px;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Make touch targets bigger for mobile */
+  .contact-item li a,
+  .navbar a {
+    padding: 10px 0;
+    display: inline-block;
+  }
+  
+  /* Improve spacing for lists on mobile */
+  .coursework li,
+  .skill-category li,
+  .experience-item li,
+  .project-item li {
+    padding-left: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Optimize mobile font sizes */
+  .skill-category h3,
+  .contact-item h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Small phone screens */
+@media (max-width: 480px) {
+  .home-container {
+    padding: 0.75rem;
+  }
+  
+  .home-container h1 {
+    font-size: 1.6rem;
+  }
+  
+  .profile-image-container {
+    max-width: 150px;
+  }
+  
+  .intro-section,
+  .education-section,
+  .experience-section,
+  .skills-section,
+  .projects-section,
+  .contact-section {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .intro-section p,
+  .education-item p,
+  .experience-item li,
+  .project-item li,
+  .contact-item p {
+    font-size: 0.95rem;
   }
 } 

@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
 }
 
 body {
@@ -10,11 +11,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Prevent overscroll bounce effect on mobile */
+  overscroll-behavior: none;
+  /* Prevent content shifting when address bar shows/hides */
+  min-height: 100vh;
 }
 
 /* Add smooth scrolling to the page */
 html {
   scroll-behavior: smooth;
+  /* Improve touch scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Improve button and input styling across browsers */
@@ -22,4 +29,51 @@ button,
 input,
 textarea {
   font-family: inherit;
+  /* Improve click targets on mobile */
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Make links and buttons more touch-friendly */
+a, button, [role="button"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+/* Prevent images from causing overflow on mobile */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optimize mobile text sizes */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* Slightly smaller base font size for mobile */
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Optimize small phone screens */
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+  
+  /* Reduce padding/margins on very small screens */
+  .container, section, article {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+  }
 }
