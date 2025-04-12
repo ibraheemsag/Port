@@ -3,7 +3,7 @@ import './Home.css';
 const Home = () => {
   return (
     <div className="home-container">
-      <h1>Ibraheem Alsaghier</h1>
+      <h1>Ibraheem</h1>
       <div className="profile-image-container">
         <img 
           src="/Ibraheem Alsaghier.jpg" 
@@ -16,7 +16,7 @@ const Home = () => {
         />
       </div>
       <section className="intro-section">
-      <h2>AI Systems & Computer Science Researcher</h2>
+      <h2>AI Systems & Computer Science Student</h2>
         <p>
           I'm a Computer Science graduate student at KAUST specializing in AI and distributed systems. 
           With research experience in agentic AI fault-diagnosis for microservices, I build intelligent 
