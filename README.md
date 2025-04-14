@@ -183,10 +183,3 @@ Once the backend is running, you can access the API documentation at:
 - Swagger UI: http://localhost:8000/docs
 - ReDoc: http://localhost:8000/redoc
 
-## Contributors
-
-- [Your Name](your-profile-link)
-
-## License
-
-[Specify your license here] 
